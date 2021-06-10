@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AlertDialogue_he</string>
+    <string name="tv_title_dialog">Dialog</string>
+    <string name="bt_app_close">App close</string>
+    <string name="dialog_title_str_app_close">App close</string>
+    <string name="dialog_msg_str_app_close">do you want to exit app?</string>
+    <string name="dialog_btn_str_cancel">cancel</string>
+    <string name="dialog_btn_str_no">no</string>
+    <string name="dialog_btn_str_yes">yes</string>
+
+    <string name="dialog_toast_str_cancel">cancel</string>
+
+    <string name="tv_title_progressbar_circle">progress bar circle</string>
+    <string name="btn_progressbar_show">progress bar show</string>
+    <string name="btn_progressbar_hide">progress bar hide</string>
+
+
+    <string name="tv_title_pg_horizontal">progress bar horizontal</string>
+    <string name="bt_pg_horizontal">progress bar horizontal</string>
+
+
+</resources>

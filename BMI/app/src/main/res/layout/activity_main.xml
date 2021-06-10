@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="#ABFFEC3C">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.8"
+        android:gravity="bottom"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="BMI"
+            android:textSize="70dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:padding="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="들어 본 적 있으신가요?"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="italic|bold"
+            android:layout_marginBottom="10dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        >
+
+        <Button
+            android:id="@+id/btn_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#E688A5FA"
+            android:layout_marginTop="15dp"
+            android:text="알아보기"
+            android:textColor="#9F423F3F"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+            
+
+
+
+
+
+
+</LinearLayout>

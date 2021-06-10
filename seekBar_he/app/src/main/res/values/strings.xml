@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">seekBar_he</string>
+
+    <string name="tv_seekbar_title">seekbar</string>
+    <string name="tv_ratingbar_title">ratingbar</string>
+
+    <string name="bt_submit">submit</string>
+
+</resources>

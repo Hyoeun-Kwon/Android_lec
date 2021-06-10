@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1234567890"
+        android:layout_marginBottom="2dp"
+        />
+
+    <Button
+        android:id="@+id/insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3D3D3"
+        android:text="INS"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3D3D3"
+        android:text="DEL"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        />
+
+    <Button
+        android:id="@+id/append"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3D3D3"
+        android:text="APP"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        />
+
+    <Button
+        android:id="@+id/replace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3D3D3"
+        android:text="REP"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D3D3D3"
+        android:text="CLEAR"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        />
+
+</LinearLayout>

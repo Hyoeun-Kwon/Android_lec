@@ -1,0 +1,2 @@
+rootProject.name = "Quiz6_TouchMessage"
+include ':app'

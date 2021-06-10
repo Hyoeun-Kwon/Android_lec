@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="#97FBF5D2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="측정한 결과 입니다."
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="키"
+            />
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#69A4EC"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:text="00"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="몸무게"
+            />
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="#69A4EC"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="00"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결과: "
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#E6FAB62E"
+        />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="아래 그림을 참고하세요."
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:src="@drawable/bmiresult"
+
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="추천하는 운동입니다."
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+         <ImageView
+             android:id="@+id/img_ex1"
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:src="@drawable/ic_launcher_background"
+             android:padding="10dp"
+             />
+        <ImageView
+            android:id="@+id/img_ex2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_background"
+            android:padding="10dp"
+            />
+        <ImageView
+            android:id="@+id/img_ex3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_background"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Youtube 사이트"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JJ 타바타"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=BnmxF7Fw_hE"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColorLink="#6589F3"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소미핏 복근 운동"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=sVQqBDBZhmI"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColorLink="#6589F3"
+            android:layout_marginTop="3dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="땅끄부부 똥배 폭파 운동"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=2Uv1B3kjCOI"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColorLink="#6589F3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다노 스트레칭"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=WwVLRtqGmzI"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="50dp"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColorLink="#6589F3"
+            />
+
+    </LinearLayout>
+</ScrollView>

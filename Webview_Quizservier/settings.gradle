@@ -1,0 +1,2 @@
+rootProject.name = "Webview_Quiz(servier)"
+include ':app'

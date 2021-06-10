@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"> //디자인 요소
+    <item android:state_enabled="true"> //정상상태냐, 버튼을 누른상태냐 등등 상태를 정함
+        <shape> //모양
+            <solid android:color="#D8B8FF"> //컬러(채운다.)
+
+            </solid>
+            <corners android:radius="20dp"> //코너(라운드 모양)
+
+            </corners>
+        </shape>
+    </item>
+
+    <item android:state_pressed="true">
+        <shape> <!--모양-->
+            <solid android:color="#000000"> <!--컬러(채운다.)-->
+
+            </solid>
+            <corners android:radius="20dp"> <!--라운드 모양-->
+
+            </corners>
+        </shape>
+    </item>
+
+</selector>
+
+

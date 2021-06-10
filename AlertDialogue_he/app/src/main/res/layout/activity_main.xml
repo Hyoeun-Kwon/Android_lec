@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/tv_title_dialog"
+         />
+
+    <Button
+        android:id="@+id/bt_app_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_app_close"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/tv_title_progressbar_circle"
+        />
+
+    <Button
+        android:id="@+id/bt_progress_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_progressbar_show"
+        />
+    <Button
+        android:id="@+id/bt_progress_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_progressbar_hide"
+        />
+
+    <ProgressBar
+        android:id="@+id/pg_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#7DACF3"
+        android:visibility="invisible"
+        style="?android:attr/progressBarStyle"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/tv_title_pg_horizontal"
+        />
+    <Button
+        android:id="@+id/bt_progressbar_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_pg_horizontal"
+        />
+
+    <ProgressBar
+        android:id="@+id/pg_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#7DACF3"
+        android:progress="0"
+        android:visibility="invisible"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+
+    <TextView
+        android:id="@+id/tv_progress_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:gravity="right"
+        />
+</LinearLayout>

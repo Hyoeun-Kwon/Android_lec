@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_seekbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_seekbar_title"
+        android:textSize="20sp"
+        />
+    <SeekBar
+        android:id="@+id/sb_lighting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="10"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#00ff00"
+        android:secondaryProgress="80"
+        android:secondaryProgressTint="#ff0000"
+        android:thumbTint="#00ff00"
+        />
+
+    <TextView
+        android:id="@+id/tv_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="right"
+        />
+    <TextView
+        android:id="@+id/tv_ratingbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_ratingbar_title"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <RatingBar
+            android:id="@+id/rb_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="0.5"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="right"
+        />
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_submit"
+        android:backgroundTint="#C5A2E8"
+        />
+
+</LinearLayout>

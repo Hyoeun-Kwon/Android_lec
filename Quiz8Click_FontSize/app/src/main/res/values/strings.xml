@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Quiz8(Click_FontSize)</string>
+    <string name="smallFont">SMALL FONT</string>
+    <string name="largeFont">LARGE FONT</string>
+</resources>

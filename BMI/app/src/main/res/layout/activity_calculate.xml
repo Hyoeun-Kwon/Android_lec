@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:background="#65FFEC3C">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="측정을 위해\n 키와 몸무게를 입력해주세요"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/et_height"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:hint="키를 입력하세요 (cm)"
+        android:textColorHint="#69A4EC"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:id="@+id/et_weight"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:hint="몸무를 입력하세요 (kg)"
+        android:textColorHint="#69A4EC"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="결과"
+        android:backgroundTint="#E688A5FA"
+        />
+
+
+
+
+        
+
+</LinearLayout>    
