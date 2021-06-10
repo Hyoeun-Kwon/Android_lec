@@ -1,9 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DeleteActivity">
+    tools:context=".Activity.InsertActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:text="학생 정보 삭제"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_weight="3"
+        />
+    <TextView
+        android:id="@+id/delete_code"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:hint="학번(4자리)"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/delete_name"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:hint="이름(10자리)"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/delete_dept"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:hint="전공(12자리)"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/delete_phone"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:hint="전화번호(12자리)"
+        android:textSize="20dp"
+        android:layout_weight="1"
+        />
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:text="삭제"
+        android:backgroundTint="#819FAEF6"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>
