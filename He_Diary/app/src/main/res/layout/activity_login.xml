@@ -16,7 +16,7 @@
         android:gravity="center"
         >
         <EditText
-            android:id="@+id/login_etemail"
+            android:id="@+id/login_etname"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:hint="이름을 입력해주세요"

@@ -19,8 +19,6 @@ public class StudentAdapter extends BaseAdapter {
     private LayoutInflater inflater = null ;
 
     //생성자
-
-
     public StudentAdapter(Context mContext, int layout, ArrayList<Student> data) {
         this.mContext = mContext;
         this.layout = layout;

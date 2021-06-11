@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.aoslec.he_diary"
-        minSdkVersion 16
+        applicationId "com.aoslec.mycalendar"
+        minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"

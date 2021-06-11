@@ -17,8 +17,8 @@ import com.aoslec.he_diary.R;
 public class RegisterActivity extends AppCompatActivity {
     //작업용
     String urlAddr = null;
-    String sname, spwd, spwdchk;
-    String myIP = "192.168.35.35";
+    String sName, sPwd, sPwdChk;
+    String myIP = null;
 
     private EditText eName,ePwd,ePwdChk; //회원가입 입력필드(이름,이메일,패스워드,패스워드 확인)
     private Button btnRegister,btnCancel; //회원가입 및 취소 버튼
@@ -27,6 +27,8 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        Intent intent = getIntent();
+        myIP = intent.getStringExtra("myIP");
         urlAddr = "http://"+ myIP + ":8080/test/diaryInsert.jsp?";
 
 
@@ -57,41 +59,32 @@ public class RegisterActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             //회원가입 처리 시작
-            sname = eName.getText().toString();
-            spwd = ePwd.getText().toString();
-            spwdchk = ePwdChk.getText().toString();
+            sName = eName.getText().toString();
+            sPwd = ePwd.getText().toString();
+            sPwdChk = ePwdChk.getText().toString();
 
             switch(v.getId()){
                 case R.id.reg_btnRegister:
-                    if(spwd.equals(spwdchk)){
-                        Log.v("Message","password : "+spwd);
-                        Log.v("Message","passwordCheck : "+spwdchk);
-                        intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                        intent.putExtra("userName",sname);
-                        intent.putExtra("userPwd",spwd);
-                        intent.putExtra("myIp",myIP);
-                        startActivity(intent);
+                    if(sPwd.equals(sPwdChk)){
+                        Log.v("Message","password : "+sPwd);
+                        Log.v("Message","passwordCheck : "+sPwdChk);
+                        urlAddr = urlAddr + "name=" + sName + "&password=" +sPwd;
+                        String result = connectInsertData();//여기에 return값 줄거임
+                            if(result.equals("1")){
+                                Toast.makeText(RegisterActivity.this, sName+"가 입력되었습니다.", Toast.LENGTH_SHORT).show();
+                            }else{
+                                Toast.makeText(RegisterActivity.this, "입력이 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                            }
                         Toast.makeText(RegisterActivity.this, "가입에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-
+                        finish();
                     }else{
                         Toast.makeText(RegisterActivity.this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
                     }
                     break;
                 case R.id.reg_btnCancel:
-                    intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                    startActivity(intent);
+                    finish();
                     break;
             }//switch
-            urlAddr = urlAddr + "name=" + sname + "&pwd=" +spwd;
-            //urlAddr는 전역변수라 아무 메소드에서 쓸 수 있음
-            String result = connectInsertData();//여기에 return값 줄거임
-            //->conncecInsertData 메소드 만들어 줄거임
-            if(result.equals("1")){
-                Log.v("Message","result : "+ result);
-                Toast.makeText(RegisterActivity.this, sname+"이 입력되었습니다.", Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(RegisterActivity.this, "입력이 실패하였습니다.", Toast.LENGTH_SHORT).show();
-            }
         }//onClick
     };//onClickListener
 

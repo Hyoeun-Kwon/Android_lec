@@ -93,7 +93,7 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
                 //넌 무슨 기능이니? select, insert, delete
                 if(where.equals("select")){
                     //return 값이 없고
-                    //parserSelect(stringBuffer.toString());
+                    parserSelect(stringBuffer.toString());
                 }else {
                     //return 값이 있다.
                     result = parserAction(stringBuffer.toString());
@@ -133,30 +133,30 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
         return  returnValue;
     }
 
-//    //parserSelect--> Select문을 사용할때 씀
-//    private void parserSelect(String str){
-//        try{
-//            JSONObject jsonObject = new JSONObject(str);
-//            JSONArray jsonArray = new JSONArray(jsonObject.getString("students_info"));
-//            beans.clear();
-//
-//            for(int i=0; i<jsonArray.length(); i++){
-//                JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
-//                String name = jsonObject1.getString("name");
-//                String password = jsonObject1.getString("password");
-//
-//                //어레이에 있는거 뽑아와서 빈
-//                Bean bean = new Bean(name,password);
-//                beans.add(bean);
-//                //members는 어레이리스트, member는 빈
-//                //--->for문 돌면서 차곡차곡 쌓기
-//            }
-//
-//
-//        }catch (Exception e){
-//            e.printStackTrace();
-//        }
-//    }
+    //parserSelect--> Select문을 사용할때 씀
+    private void parserSelect(String str){
+        try{
+            JSONObject jsonObject = new JSONObject(str);
+            JSONArray jsonArray = new JSONArray(jsonObject.getString("user_info"));
+            beans.clear();
+
+            for(int i=0; i<jsonArray.length(); i++){
+                JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
+                String name = jsonObject1.getString("name");
+                String password = jsonObject1.getString("password");
+
+                //어레이에 있는거 뽑아와서 빈
+                Bean bean = new Bean(name,password);
+                beans.add(bean);
+                //members는 어레이리스트, member는 빈
+                //--->for문 돌면서 차곡차곡 쌓기
+            }
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 
 

@@ -1,53 +1,41 @@
-package com.aoslec.he_diary.Activity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-import android.util.Log;
-
+package com.aoslec.mycalendar.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.aoslec.he_diary.DiaryActivity;
-import com.aoslec.he_diary.R;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.aoslec.mycalendar.R;
 import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
 
+import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.util.Calendar;
+import java.util.Enumeration;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_logout;
+
+
     CalendarView calendarView;
-    String myIP = null;
-    Intent intent = null;
+    private boolean InetAddressUtils;
+
+    String macIP = "192.168.35.155";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.v("Message", macIP);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //intent로 ip값 받아오기
-        Intent intent = getIntent();
-        myIP = intent.getStringExtra("myIP");
 
-        //캘린더
         calendarView = findViewById(R.id.calendarView);
         calendarView.setOnDayClickListener(dayClick);
 
-        //로그아웃 작업
-        btn_logout = findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //로그아웃 하기
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-                //finish();//앱 끄기
-            }
-        });
-
-    }//onCreate
+    } // onCreate
 
     OnDayClickListener dayClick = new OnDayClickListener() {
         @Override
@@ -68,10 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
             Intent intent = new Intent(MainActivity.this, DiaryActivity.class);
             intent.putExtra("date", date);
-            intent.putExtra("myIP", myIP);
+            intent.putExtra("macIP", macIP);
             startActivity(intent);
         }
     };
 
 
-}//Main
+
+
+} //Main
