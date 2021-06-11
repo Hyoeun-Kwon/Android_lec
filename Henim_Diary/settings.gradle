@@ -1,0 +1,2 @@
+rootProject.name = "Henim_Diary"
+include ':app'
