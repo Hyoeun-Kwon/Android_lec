@@ -1,7 +1,6 @@
-package com.aoslec.mycalendar.Bean;
+package com.aoslec.he_diary.Bean;
 
 public class Diary {
-
     // Field
     private String date;
     private String title;
@@ -48,3 +47,4 @@ public class Diary {
         this.status = status;
     }
 }
+

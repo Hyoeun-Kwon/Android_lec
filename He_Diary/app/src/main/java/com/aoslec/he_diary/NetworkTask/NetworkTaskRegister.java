@@ -1,11 +1,9 @@
 package com.aoslec.he_diary.NetworkTask;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.util.Log;
 
-import com.aoslec.he_diary.Bean.Diary;
+import com.aoslec.he_diary.Bean.Register;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -17,7 +15,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class NetworkTask extends AsyncTask<Integer,String,Object> {
+public class NetworkTaskRegister extends AsyncTask<Integer,String,Object> {
 
 
     //어디로 넘겨주지 ? 필요하므로 컨택스트
@@ -25,20 +23,20 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
     //우리 웹서버 어디에 있지? -> Ip주소
     String mAddr = null;
     ProgressDialog progressDialog = null;
-    ArrayList<Diary> diaries;//---> 아 bean 만들어야 겠다
+    ArrayList<Register> registers;//---> 아 bean 만들어야 겠다
 
 
     // Network Task를 검색 입력 수정 삭제 구분없이 하나로 사용키 위해 생성자 변수 추가.
     String where = null;
 
     //dialog 빼고
-    public NetworkTask(Context context, String mAddr, String where) {
+    public NetworkTaskRegister(Context context, String mAddr, String where) {
         //누가 부른다, 주소는 뭐야 , 입력인지 수정인지 삭제인지
         //예 ) insertActivity가 불럿어, 주소는 뭐고 insert 할거야
         this.context = context;
         this.mAddr = mAddr;
-        this.diaries = diaries;
-        this.diaries = new ArrayList<Diary>();//입력할때도 어레이 쓰고 그래야 해서
+        this.registers = registers;
+        this.registers = new ArrayList<Register>();//입력할때도 어레이 쓰고 그래야 해서
         //어레이는 불러올때만 쓰면 되는데 그래서 매개변수에 안넣음
         this.where = where;
     }
@@ -70,7 +68,6 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
 
     @Override
     protected Object doInBackground(Integer... integers) {
-        Log.v("Message","doInBackGround");
         StringBuffer stringBuffer = new StringBuffer();
         InputStream inputStream = null;
         InputStreamReader inputStreamReader = null;
@@ -117,7 +114,7 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
         }
         //
         if(where.equals("select")){
-            return diaries; // select는 엄청 많은 값이 들어올거임
+            return registers; // select는 엄청 많은 값이 들어올거임
         }else{
             return  result; //입력 수정 삭제는 잘했다 못했다만 넘어 올거고
         }
@@ -127,7 +124,6 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
     //{"result" : "ok"}
     //{} : JSONObject
     private  String parserAction(String str){
-        Log.v("Message","parserAction");
         String returnValue = null;
         try {
             JSONObject jsonObject = new JSONObject(str);
@@ -140,25 +136,19 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
 
     //parserSelect--> Select문을 사용할때 씀
     private void parserSelect(String str){
-        Log.v("Message","parserSelect");
         try{
             JSONObject jsonObject = new JSONObject(str);
-            Log.v("Message","jsonObject 진입");
-            JSONArray jsonArray = new JSONArray(jsonObject.getString("diary_list"));
-            Log.v("Message","jsonArray 진입");
-
-            diaries.clear();
+            JSONArray jsonArray = new JSONArray(jsonObject.getString("user_info"));
+            registers.clear();
 
             for(int i=0; i<jsonArray.length(); i++){
                 JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
-                String date = jsonObject1.getString("date");
-                String title = jsonObject1.getString("title");
-                String detail = jsonObject1.getString("detail");
-                String status = jsonObject1.getString("status");
-                Log.v("Message","date:" + date + "title :" + title);
+                String name = jsonObject1.getString("name");
+                String password = jsonObject1.getString("password");
+
                 //어레이에 있는거 뽑아와서 빈
-                Diary diary = new Diary(date,title,detail,status);
-                diaries.add(diary);
+                Register register = new Register(name,password);
+                registers.add(register);
                 //members는 어레이리스트, member는 빈
                 //--->for문 돌면서 차곡차곡 쌓기
             }

@@ -4,11 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.aoslec.he_diary.Bean.Bean;
+import com.aoslec.he_diary.Bean.Register;
 import com.aoslec.he_diary.R;
 
 import java.util.ArrayList;
@@ -19,9 +20,9 @@ public class LoginActivity extends AppCompatActivity {
     Button btnLogin, btnRegister;
     EditText userName, userPwd;
     String sName, sPwd;
-    String myIP = "192.168.35.35";
+    String myIP = "192.168.35.147";
     String urlAddr = null;//만들어줄 어드레스
-    ArrayList<Bean> beans;
+    ArrayList<Register> registers;
     //BeanAdapter adapter;
 
 
@@ -59,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
                     case R.id.login_btnLogin:
                         //if(sName.equals(beans.get(position).getName()))
                         intent = new Intent(LoginActivity.this, MainActivity.class);
+                        intent.putExtra("myIP",myIP);
+                        Log.v("Message","Login_myIP:"+ myIP);
                         startActivity(intent);
                         break;
                     case R.id.login_btnRegister:

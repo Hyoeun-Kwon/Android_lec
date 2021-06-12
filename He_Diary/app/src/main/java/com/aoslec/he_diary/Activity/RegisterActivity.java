@@ -1,7 +1,5 @@
 package com.aoslec.he_diary.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -11,7 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.aoslec.he_diary.NetworkTask.NetworkTask;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.aoslec.he_diary.NetworkTask.NetworkTaskRegister;
 import com.aoslec.he_diary.R;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -93,9 +93,9 @@ public class RegisterActivity extends AppCompatActivity {
         try{
             //여기서 networktask
             //insertactivity에서 부른거야, 나는 ip주소 줄게 그리고     hb insert 할거야
-            NetworkTask networkTask = new NetworkTask(RegisterActivity.this, urlAddr,"insert");
+            NetworkTaskRegister networkTaskRegister = new NetworkTaskRegister(RegisterActivity.this, urlAddr,"insert");
             //jsp통해서 받아온 return 값 -> object
-            Object obj = networkTask.execute().get();
+            Object obj = networkTaskRegister.execute().get();
             result = (String) obj;
         }catch (Exception e){
             e.printStackTrace();

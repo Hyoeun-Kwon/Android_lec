@@ -1,46 +1,48 @@
-package com.aoslec.mycalendar.Activity;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.aoslec.he_diary.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aoslec.mycalendar.NetworkTask.NetworkTask;
-import com.aoslec.mycalendar.R;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.aoslec.he_diary.NetworkTask.NetworkTask;
+import com.aoslec.he_diary.R;
 
 public class DiaryActivity extends AppCompatActivity {
-
     String urlAddr= null;
-    String sdate, stitle, sdetail, macIP;
+    String sdate, stitle, sdetail, sstatus, myIP;
 
     TextView tv_diary_date;
-    EditText edt_diary_detail, edt_diary_title;
+    EditText edt_diary_detail, edt_diary_title,edt_diary_status;
     Button btn_dairy_insert;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diary);
 
+
+
 //        Intent intent = getIntent();
 //
-//        macIP = intent.getStringExtra("macIP");
-//        urlAddr = "http://" + macIP + ":8080/test/diaryInsertReturn.jsp?";
+//        macIP = intent.getStringExtra("myIP");
+//        urlAddr = "http://" + myIP + ":8080/test/diaryInsertReturn.jsp?";
 
 //        tv_diary_date = findViewById(R.id.tv_diary_date);
 //        tv_diary_date.setText(intent.getStringExtra("date"));
 
         edt_diary_title = findViewById(R.id.edt_diary_title);
         edt_diary_detail = findViewById(R.id.edt_diary_detail);
+        //status추가
+        edt_diary_status = findViewById(R.id.edt_diary_status);
 
         btn_dairy_insert = findViewById(R.id.new_diary_insert);
         btn_dairy_insert.setOnClickListener(onClickListener);
-
 
     }//onCreate
 
@@ -49,8 +51,9 @@ public class DiaryActivity extends AppCompatActivity {
         super.onResume();
         Intent intent = getIntent();
 
-        macIP = intent.getStringExtra("macIP");
-        urlAddr = "http://" + macIP + ":8080/test/diaryInsertReturn.jsp?";
+        myIP = intent.getStringExtra("myIP");
+        Log.v("Message","Diary_getmyIP:"+ myIP);
+        urlAddr = "http://" + myIP + ":8080/test/diaryInsertReturn.jsp?";
 
         tv_diary_date = findViewById(R.id.tv_diary_date);
         tv_diary_date.setText(intent.getStringExtra("date"));
@@ -64,8 +67,9 @@ public class DiaryActivity extends AppCompatActivity {
             sdate = tv_diary_date.getText().toString();
             stitle = edt_diary_title.getText().toString();
             sdetail = edt_diary_detail.getText().toString();
+            sstatus = edt_diary_status.getText().toString();
 
-            urlAddr = urlAddr + "date=" + sdate + "&title=" + stitle + "&detail=" + sdetail;
+            urlAddr = urlAddr + "date=" + sdate + "&title=" + stitle + "&detail=" + sdetail + "&status=" + sstatus;
 
             String result = connectInsertData();
 //            if(result.equals("1")){
@@ -75,6 +79,8 @@ public class DiaryActivity extends AppCompatActivity {
 //                Toast.makeText(DiaryActivity.this, "입력이 실패 되었습니다.", Toast.LENGTH_SHORT).show();
 //            }
 //            // back 버튼을 누른 것과 동일한 역할 (= 입력 다했으니 메인으로 간다)
+            Toast.makeText(DiaryActivity.this, "다이어리가 등록되었습니다.", Toast.LENGTH_SHORT).show();
+
             finish();
         }
     };
@@ -93,4 +99,7 @@ public class DiaryActivity extends AppCompatActivity {
     }
 
 
-}
+
+
+
+}//Main

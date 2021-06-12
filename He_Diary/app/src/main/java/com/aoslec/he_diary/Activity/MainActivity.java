@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import android.util.Log;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.aoslec.he_diary.DiaryActivity;
 import com.aoslec.he_diary.R;
 import com.applandeo.materialcalendarview.CalendarView;
 import com.applandeo.materialcalendarview.EventDay;
@@ -19,10 +17,9 @@ import com.applandeo.materialcalendarview.listeners.OnDayClickListener;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_logout;
+    Button btnLogout, btnSelectAll;
     CalendarView calendarView;
     String myIP = null;
-    Intent intent = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,9 +32,13 @@ public class MainActivity extends AppCompatActivity {
         calendarView = findViewById(R.id.calendarView);
         calendarView.setOnDayClickListener(dayClick);
 
+        //내 모든 기록 보기
+        btnSelectAll = findViewById(R.id.btn_selectAll);
+        btnSelectAll.setOnClickListener(listClick);
+
         //로그아웃 작업
-        btn_logout = findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
+        btnLogout = findViewById(R.id.btn_logout);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //로그아웃 하기
@@ -71,7 +72,16 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("myIP", myIP);
             startActivity(intent);
         }
-    };
+    };//dayClick
+
+    View.OnClickListener listClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, ListActivity.class);
+            intent.putExtra("myIP", myIP);
+            startActivity(intent);
+        }
+    };//listClick
 
 
 }//Main

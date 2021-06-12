@@ -1,10 +1,10 @@
 package com.aoslec.he_diary.Bean;
 
-public class Bean {
+public class Register {
    private String name;
    private String password;
 
-    public Bean(String name, String password) {
+    public Register(String name, String password) {
         this.name = name;
         this.password = password;
     }

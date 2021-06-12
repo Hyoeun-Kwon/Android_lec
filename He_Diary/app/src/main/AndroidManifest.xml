@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.He_Diary"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DiaryActivity"></activity>
+        <activity android:name=".Activity.ListActivity"></activity>
+        <activity android:name=".Activity.DiaryActivity" />
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.RegisterActivity" />
         <activity android:name=".Activity.IntroActivity">
