@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     app:cardBackgroundColor="#D5AEBA"
-    app:cardCornerRadius="12dp"
+    app:cardCornerRadius="8dp"
     android:clickable="true"
     android:focusable="true"
     android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Date"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="#ffffff"
@@ -32,6 +32,15 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             >
+
+            <WebView
+                android:id="@+id/list_tvstatus"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+
             
             <LinearLayout
                 android:orientation="vertical"
@@ -54,12 +63,7 @@
                     android:layout_height="wrap_content"
                     android:text="2"
                     />
-                <TextView
-                    android:id="@+id/list_tvstatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="status"
-                    />
+
             </LinearLayout>
 
         </LinearLayout>

@@ -37,7 +37,6 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
         //예 ) insertActivity가 불럿어, 주소는 뭐고 insert 할거야
         this.context = context;
         this.mAddr = mAddr;
-        this.diaries = diaries;
         this.diaries = new ArrayList<Diary>();//입력할때도 어레이 쓰고 그래야 해서
         //어레이는 불러올때만 쓰면 되는데 그래서 매개변수에 안넣음
         this.where = where;
@@ -87,9 +86,13 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
                 inputStream = httpURLConnection.getInputStream();
                 inputStreamReader = new InputStreamReader(inputStream);
                 bufferedReader = new BufferedReader(inputStreamReader);
+                Log.v("Message","bufferedReader :" + bufferedReader);
+
                 //--> string 인식 하려구!
                 while (true){
                     String strline = bufferedReader.readLine();
+                    Log.v("Message","strline :" +strline);
+
                     if(strline == null) break;
                     stringBuffer.append(strline + "\n");
                 }
@@ -101,6 +104,8 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
                 }else {
                     //return 값이 있다.
                     result = parserAction(stringBuffer.toString());
+                    Log.v("Message","result :" + result);
+
                 }
             }
         }catch (Exception e){
@@ -144,20 +149,20 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
         try{
             JSONObject jsonObject = new JSONObject(str);
             Log.v("Message","jsonObject 진입");
-            JSONArray jsonArray = new JSONArray(jsonObject.getString("diary_list"));
+            JSONArray jsonArray = new JSONArray(jsonObject.getString("diary_info"));
             Log.v("Message","jsonArray 진입");
-
             diaries.clear();
+            Log.v("Message", "  - parserSelect : diarys clear OK");
 
             for(int i=0; i<jsonArray.length(); i++){
                 JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
-                String date = jsonObject1.getString("date");
-                String title = jsonObject1.getString("title");
-                String detail = jsonObject1.getString("detail");
-                String status = jsonObject1.getString("status");
-                Log.v("Message","date:" + date + "title :" + title);
+                String date1 = jsonObject1.getString("date");
+                String title1 = jsonObject1.getString("title");
+                String detail1 = jsonObject1.getString("detail");
+                String status1 = jsonObject1.getString("status");
+                Log.v("Message","date:" + date1 + "title :" + title1);
                 //어레이에 있는거 뽑아와서 빈
-                Diary diary = new Diary(date,title,detail,status);
+                Diary diary = new Diary(date1,title1,detail1,status1);
                 diaries.add(diary);
                 //members는 어레이리스트, member는 빈
                 //--->for문 돌면서 차곡차곡 쌓기
@@ -165,6 +170,7 @@ public class NetworkTask extends AsyncTask<Integer,String,Object> {
 
 
         }catch (Exception e){
+            Log.v("Message", "Fail to get DB");
             e.printStackTrace();
         }
     }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    android:paddingTop="24dp"
+    android:paddingBottom="40dp"
+    tools:context=".Activity.BottomSheet"
+    >
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="환영합니다:)"
+        android:layout_marginBottom="16dp"
+        android:textSize="25dp"
+        android:textColor="@android:color/black"
+    />
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" 달력의 날짜를 클릭하면 \n 글을 작성할 수 있습니다."
+        android:layout_marginBottom="8dp"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        />
+
+
+    <Button
+        android:id="@+id/bottom_btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        android:textStyle="bold"
+        android:backgroundTint="#B5BF8EAE"
+        />
+</LinearLayout>

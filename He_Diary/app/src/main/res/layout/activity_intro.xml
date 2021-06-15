@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#B5956986">
+    android:background="#BA93AA">
 
     <ImageView
         android:id="@+id/lmg_logo"

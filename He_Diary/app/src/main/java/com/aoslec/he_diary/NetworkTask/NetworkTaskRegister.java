@@ -2,6 +2,7 @@ package com.aoslec.he_diary.NetworkTask;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.aoslec.he_diary.Bean.Register;
 
@@ -35,7 +36,6 @@ public class NetworkTaskRegister extends AsyncTask<Integer,String,Object> {
         //예 ) insertActivity가 불럿어, 주소는 뭐고 insert 할거야
         this.context = context;
         this.mAddr = mAddr;
-        this.registers = registers;
         this.registers = new ArrayList<Register>();//입력할때도 어레이 쓰고 그래야 해서
         //어레이는 불러올때만 쓰면 되는데 그래서 매개변수에 안넣음
         this.where = where;
@@ -115,8 +115,12 @@ public class NetworkTaskRegister extends AsyncTask<Integer,String,Object> {
         //
         if(where.equals("select")){
             return registers; // select는 엄청 많은 값이 들어올거임
+            //어레이 리스트에대가 값을 받아서 요청한 context에 반환해줌 (데이터를 준다)
         }else{
             return  result; //입력 수정 삭제는 잘했다 못했다만 넘어 올거고
+            //데이터를 줄 필요는 없고 , 쿼리만 실행시키면 됨
+            //쿼리: sql 명령어
+            //result 1 : 쿼리문이 정상적으로 1번 실행 되었다.
         }
     }//doinback
 
@@ -136,18 +140,26 @@ public class NetworkTaskRegister extends AsyncTask<Integer,String,Object> {
 
     //parserSelect--> Select문을 사용할때 씀
     private void parserSelect(String str){
+        Log.v("Message", "METHOD : parserSelect");
         try{
             JSONObject jsonObject = new JSONObject(str);
+            Log.v("Message","jsonObject 진입");
             JSONArray jsonArray = new JSONArray(jsonObject.getString("user_info"));
+            Log.v("Message","jsonArray 진입");
             registers.clear();
+            Log.v("Message", "  - parserSelect : registers clear OK");
+
 
             for(int i=0; i<jsonArray.length(); i++){
                 JSONObject jsonObject1 = (JSONObject) jsonArray.get(i);
                 String name = jsonObject1.getString("name");
                 String password = jsonObject1.getString("password");
+                Log.v("Message","name:" + name + "password :" + password);
+
 
                 //어레이에 있는거 뽑아와서 빈
                 Register register = new Register(name,password);
+                Log.v("Message", "Register_(bean)_register :" + register);
                 registers.add(register);
                 //members는 어레이리스트, member는 빈
                 //--->for문 돌면서 차곡차곡 쌓기

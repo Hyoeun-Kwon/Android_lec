@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DiaryActivity"
+    tools:context=".Activity.DiaryUpdateActivity"
     >
 
     <LinearLayout
@@ -21,7 +21,7 @@
         android:layout_weight="0.5"
         >
         <TextView
-            android:id="@+id/tv_diary_date"
+            android:id="@+id/tv_diary_date_update"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -36,7 +36,7 @@
         android:layout_weight="0.5"
         >
         <EditText
-            android:id="@+id/edt_diary_title"
+            android:id="@+id/edt_diary_title_update"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="제목"
@@ -54,8 +54,8 @@
         android:padding="10dp"
         android:gravity="center"
         >
-        <ImageView
-            android:id="@+id/imageview_diary_status"
+        <WebView
+            android:id="@+id/web_diary_status_update"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="2"
@@ -63,10 +63,10 @@
             />
 
         <EditText
-            android:id="@+id/edt_diary_detail"
+            android:id="@+id/edt_diary_detail_update"
             android:layout_width="match_parent"
             android:layout_height="0px"
-            android:layout_weight="1.5"
+            android:layout_weight="2"
             android:padding="20dp"
             android:hint="write"
             />
@@ -90,18 +90,18 @@
             android:gravity="right"
             >
             <Button
-                android:id="@+id/new_diaryimg_insert"
+                android:id="@+id/new_diary_delete"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="이미지 업로드"
+                android:text="삭제"
+                android:backgroundTint="#BAA9A9"
                 android:layout_marginRight="20dp"
-                android:backgroundTint="#B5BF8EAE"
                 />
             <Button
-                android:id="@+id/new_diary_insert"
+                android:id="@+id/new_diary_update"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="입력"
+                android:text="수정"
                 android:layout_marginRight="20dp"
                 android:backgroundTint="#B5956986"
                 />

@@ -1,12 +1,16 @@
 package com.aoslec.he_diary.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.aoslec.he_diary.Adapter.ListAdapter;
 import com.aoslec.he_diary.Bean.Diary;
@@ -36,6 +40,7 @@ public class ListActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rv_lists);
         //linearLayoutManager(context)
         layoutManager = new LinearLayoutManager(ListActivity.this);
+        //layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL);
         //recyclerview야 너는 리니어야! 알려주기
         recyclerView.setLayoutManager(layoutManager);
 
@@ -70,20 +75,18 @@ public class ListActivity extends AppCompatActivity {
 
             //networktask 가 구동이 되서
             Object obj = networkTask.execute().get();//프로그레스바 돌고, 데이터 가지러가고
-            diaries = (ArrayList<Diary>) obj;
+            diaries = (ArrayList<Diary>) obj;//결과
 
             adapter = new ListAdapter(ListActivity.this, R.layout.custom_layout, diaries);
             recyclerView.setAdapter((RecyclerView.Adapter) adapter);
 
-            //클릭할거냐 롱클릭할거냐는 listView에 속성이 들어가야 함
-            //listView.setOnItemClickListener(onItemClickListener);
-            //listView.setOnItemLongClickListener(onItemLongClickListener);
 
         }catch(Exception e){
             e.printStackTrace();
         }
+    }//connectGetdata end
 
-    }
+
 
 
 }//main

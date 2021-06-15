@@ -24,7 +24,7 @@
         android:layout_weight="1"
         android:textSize="20dp"
         android:gravity="center"
-        android:text="192.168.121.130"
+        android:text="192.168.244.130"
         />
     <Button
         android:id="@+id/btn_insert"
