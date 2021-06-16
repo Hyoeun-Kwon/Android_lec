@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55a97e8f-10ab-4002-887e-232a5ac3df99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../BottomSheetDialog/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BottomSheetDialog/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BottomSheetDialog/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DBCRUD/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DBCRUD/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TabLayoutTest/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,5 +64,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
