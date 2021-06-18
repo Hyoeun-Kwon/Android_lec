@@ -3,9 +3,12 @@
     package="com.aoslec.haezzo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
-        android:name=".CustomApplication"
+        android:name=".LoginActivity.CustomApplication"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,10 +18,10 @@
         <activity android:name=".MypageActivity"></activity>
         <activity android:name=".HaezulgaeListActivity" />
         <activity android:name=".HaezzoListActivity" />
-        <activity android:name=".SignUpReceiveInfoActivity" />
+        <activity android:name=".LoginActivity.SignUpReceiveInfoActivity" />
         <activity android:name=".KakaoLoginActivity" />
-        <activity android:name=".SubActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".LoginActivity.SubActivity" />
+        <activity android:name=".LoginActivity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,7 +32,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="5ff4b4e18cfb50396955ce5c3549997a" />
+            android:value="c31000113be684c60e864f48656b3f31" />
     </application>
 
 </manifest>

@@ -7,10 +7,12 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.5"
         >
         <Button
             android:id="@+id/main_btnHaezzo"
@@ -46,7 +48,9 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:gravity="center"
         >
 
         <ImageButton

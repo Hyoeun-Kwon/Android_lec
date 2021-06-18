@@ -42,14 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     }//onCreate
 
-//    BottomNavigationView.OnNavigationItemReselectedListener naviItemSelectedListener = new BottomNavigationView.OnNavigationItemReselectedListener() {
-//        @Override
-//        public void onNavigationItemReselected(@NonNull  MenuItem item) {
-//            switch (item.getItemId()){
-//                case R.
-//            }
-//        }
-//    };
 private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
         = new BottomNavigationView.OnNavigationItemSelectedListener() {
 

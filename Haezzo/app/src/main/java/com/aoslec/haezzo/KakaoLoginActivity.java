@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.aoslec.haezzo.LoginActivity.SubActivity;
 import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
@@ -49,6 +50,8 @@ public class KakaoLoginActivity extends AppCompatActivity {
                         intent.putExtra("name", result.getKakaoAccount().getProfile().getNickname());
                         intent.putExtra("profileImg", result.getKakaoAccount().getProfile().getProfileImageUrl());
                         intent.putExtra("email", result.getKakaoAccount().getEmail());
+                        intent.putExtra("gender", result.getKakaoAccount().getGender().getValue());
+                        intent.putExtra("agerange", result.getKakaoAccount().getAgeRange().getValue());
                         startActivity(intent);
 
                         // 연결 성공 시 로그로 이름, 프로필 사진, 이메일 표시

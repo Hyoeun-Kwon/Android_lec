@@ -37,6 +37,9 @@ dependencies {
     //카카오 로그인 (입력 후, Sync Now 클릭)
     implementation 'com.kakao.sdk:usermgmt:1.27.0'
 
+    //카카오 맵
+    implementation files('libs/libDaumMapAndroid.jar')
+
     //Glide 이미지 로드 라이브러리
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'

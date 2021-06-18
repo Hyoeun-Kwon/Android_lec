@@ -11,7 +11,8 @@
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.8"
         android:gravity="center"
         >
         <ImageView
@@ -61,7 +62,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.5"
         android:layout_margin="20dp"
         >
 
@@ -94,7 +96,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.25"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:layout_marginTop="15dp"
@@ -125,7 +128,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.25"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:layout_marginTop="15dp"
@@ -154,7 +158,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.25"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:layout_marginTop="15dp"
@@ -183,7 +188,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.25"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:layout_marginTop="15dp"
@@ -229,7 +235,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="0.3"
         >
         <Button
             android:layout_width="0px"

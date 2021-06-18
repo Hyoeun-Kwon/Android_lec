@@ -1,4 +1,4 @@
-package com.aoslec.haezzo;
+package com.aoslec.haezzo.LoginActivity;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.aoslec.haezzo.KakaoLoginActivity;
+import com.aoslec.haezzo.R;
 
 public class SplashActivity extends AppCompatActivity {
 

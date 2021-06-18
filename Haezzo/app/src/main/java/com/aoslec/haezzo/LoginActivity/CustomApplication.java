@@ -1,4 +1,4 @@
-package com.aoslec.haezzo;
+package com.aoslec.haezzo.LoginActivity;
 
 import android.app.Application;
 import android.content.Context;
