@@ -37,6 +37,14 @@ dependencies {
     //카카오 로그인 (입력 후, Sync Now 클릭)
     implementation 'com.kakao.sdk:usermgmt:1.27.0'
 
+    //카카오 로그인
+    //implementation group: project.KAKAO_SDK_GROUP, name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    // Http 통신 라이브러리
+    implementation 'com.android.volley:volley:1.2.0'
+    // Json 데이터 파싱 라이브러리
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+
     //카카오 맵
     implementation files('libs/libDaumMapAndroid.jar')
 

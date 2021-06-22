@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFCD00"
-    tools:context=".LoginActivity.SplashActivity">
+    android:background="#FFCD00"
+    tools:context=".SplashActivity">
 
     <ImageView
         android:id="@+id/lmg_logo"

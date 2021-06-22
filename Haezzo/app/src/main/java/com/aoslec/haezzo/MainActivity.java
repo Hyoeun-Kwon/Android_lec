@@ -12,13 +12,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.aoslec.haezzo.DocumentActivity.HaezulgaeListActivity;
+import com.aoslec.haezzo.DocumentActivity.WriteDocumentActivity;
+import com.aoslec.haezzo.UserHelperActivity.HelperListActivity;
+import com.aoslec.haezzo.UserHelperActivity.MypageActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.tabs.TabItem;
-import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button main_btnHaezzo,main_btnHaezulgae;
+    Button main_btnHaezzo,main_btnHaezulgae, main_writeDocument;
     BottomNavigationView main_bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
         main_btnHaezulgae = findViewById(R.id.main_btnHaezulgae);
         main_btnHaezulgae.setOnClickListener(onClickListener);
 
+        //요청하기 버튼 눌렀을 때
+        main_writeDocument = findViewById(R.id.main_writeDocument);
+        main_writeDocument.setOnClickListener(onClickListener);
+
         //바틈 네비게이션 뷰 눌렀을때
         main_bottomNavigationView = (BottomNavigationView)findViewById(R.id.main_bottom_navigation);
         main_bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -50,12 +56,12 @@ private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemS
         switch (item.getItemId()) {
             case R.id.navigation_home:
                // mTextMessage.setText(R.string.title_home);
-                startActivity(new Intent(getApplicationContext(), HaezzoListActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
                 overridePendingTransition(0,0);
                 return true;
 //            case R.id.navigation_list:
-//                startActivity(new Intent(getApplicationContext(), UseActivity.class));
+//                startActivity(new Intent(getApplicationContext(), MyHaezzoList.class));
 //                finish();
 //                overridePendingTransition(0,0);
 //                return true;
@@ -76,7 +82,7 @@ private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemS
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.main_btnHaezzo:
-                    Intent intent = new Intent(MainActivity.this,HaezzoListActivity.class);
+                    Intent intent = new Intent(MainActivity.this, HelperListActivity.class);
                     startActivity(intent);
                     break;
                 case R.id.main_btnHaezulgae:
@@ -93,6 +99,10 @@ private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemS
                                 }
                             })
                             .show();
+                    break;
+                case  R.id.main_writeDocument:
+                    Intent intent3 = new Intent(MainActivity.this, WriteDocumentActivity.class);
+                    startActivity(intent3);
             }
         }
     };

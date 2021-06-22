@@ -5,14 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MypageActivity">
+    tools:context=".UserHelperActivity.MypageActivity">
 
     <LinearLayout
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.8"
+        android:layout_weight="0.5"
         android:gravity="center"
         >
         <ImageView
@@ -54,7 +54,7 @@
 
         android:layout_width="wrap_content"
 
-        android:layout_height="0.5dp"
+        android:layout_height="0.3dp"
 
         android:background="#4682B4" />
 
@@ -63,16 +63,16 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.5"
+        android:layout_weight="0.4"
         android:layout_margin="20dp"
         >
 
         <Button
+            android:id="@+id/test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="내 프로필 관리"
             android:backgroundTint="@color/brown"
-            android:layout_margin="5dp"
             />
 
         <Button
@@ -80,7 +80,6 @@
             android:layout_height="wrap_content"
             android:text="리뷰 관리"
             android:backgroundTint="@color/brown"
-            android:layout_margin="5dp"
             />
 
     </LinearLayout>
@@ -89,7 +88,7 @@
 
         android:layout_width="wrap_content"
 
-        android:layout_height="0.5dp"
+        android:layout_height="0.1dp"
 
         android:background="#4682B4" />
 
@@ -97,17 +96,17 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.25"
+        android:layout_weight="0.22"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         >
         <TextView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="이름"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="10dp"
         />
 
@@ -116,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:text="홍길동"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@drawable/stroke"
             android:gravity="center"
             android:padding="10dp"
@@ -129,17 +128,17 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.25"
+        android:layout_weight="0.22"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         >
         <TextView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="나이"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="10dp"
             />
 
@@ -148,7 +147,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:text="25"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@drawable/stroke"
             android:gravity="center"
             android:padding="10dp"
@@ -159,17 +158,17 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.25"
+        android:layout_weight="0.22"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         >
         <TextView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="성별"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="10dp"
             />
 
@@ -178,7 +177,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:text="남"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@drawable/stroke"
             android:gravity="center"
             android:padding="10dp"
@@ -189,17 +188,17 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.25"
+        android:layout_weight="0.22"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         >
         <TextView
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:text="연락처"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="10dp"
             />
 
@@ -208,7 +207,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
             android:text="010-0000-0000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@drawable/stroke"
             android:gravity="center"
             android:padding="10dp"
@@ -226,7 +225,7 @@
 
             android:layout_width="wrap_content"
 
-            android:layout_height="0.5dp"
+            android:layout_height="0.3dp"
 
             android:background="#4682B4" />
 
@@ -239,6 +238,7 @@
         android:layout_weight="0.3"
         >
         <Button
+            android:id="@+id/myPage_btnLogout"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"

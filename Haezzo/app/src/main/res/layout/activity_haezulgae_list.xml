@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HaezulgaeListActivity">
+    tools:context=".DocumentActivity.HaezulgaeListActivity">
 
 
     <LinearLayout
@@ -45,11 +45,23 @@
             />
 
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lv_members"
+        android:id="@+id/lv_haezulgaeList"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="4"
-        />
+        android:layout_weight="4" />
+
+
+    <Button
+        android:id="@+id/haezulgaeList_btnDapply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지원하기"
+        android:textColor="@color/brown"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+    />
+
 
 </LinearLayout>

@@ -79,7 +79,8 @@ public class SubActivity extends AppCompatActivity {
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.clayout_map);
         mapViewContainer.addView(mapView);
 
-        mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(latitude, longitude), true); // 좌표
+        mapView.setCurrentLocationTrackingMode(MapView.CurrentLocationTrackingMode.TrackingModeOnWithHeading);
+        //mapView.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(latitude, longitude), true); // 좌표
         mapView.setZoomLevel(5,true); // 줌 레벨
 
         // 마커 찍는 부분
