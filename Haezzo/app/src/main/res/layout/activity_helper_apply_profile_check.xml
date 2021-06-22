@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelperApplyProfileCheckActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HelperApplyProfileCheckActivity"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="12"
+        >
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        >
+        <Button
+            android:id="@+id/btn_helper_apply_profilecheck_back"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="이전단계"
+            android:layout_marginRight="20dp"
+            />
+        <Button
+            android:id="@+id/btn_helper_apply_profilecheck_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="최종\n지원하"
+            />
+        <Button
+            android:id="@+id/btn_helper_apply_profilecheck_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="지원취소"
+            android:layout_marginLeft="20dp"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

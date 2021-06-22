@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.aoslec.haezzo.Adapter.HelperListAdapter;
 import com.aoslec.haezzo.Bean.HelperListBean;
+import com.aoslec.haezzo.DocumentActivity.WriteDocumentActivity;
 import com.aoslec.haezzo.LoginActivity.KakaoLoginActivity;
 import com.aoslec.haezzo.NetworkTask.HelperNetworkTask;
 import com.aoslec.haezzo.R;
@@ -26,6 +30,9 @@ public class HelperListActivity extends AppCompatActivity {
     //recyclerview
     RecyclerView recyclerView = null;
     RecyclerView.LayoutManager layoutManager= null;
+
+    //요청하기 버튼
+    Button helperList_btnApply;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +53,10 @@ public class HelperListActivity extends AppCompatActivity {
         //layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL);
         //recyclerview야 너는 리니어야! 알려주기
         recyclerView.setLayoutManager(layoutManager);
+
+        //요청하기 버튼
+        helperList_btnApply = findViewById(R.id.helperList_btnApply);
+        helperList_btnApply.setOnClickListener(onClickListener);
         
     }//onCreate
         @Override//*********중요!!!
@@ -113,5 +124,13 @@ public class HelperListActivity extends AppCompatActivity {
 //            }
 //        };
 
+
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(HelperListActivity.this, WriteDocumentActivity.class);
+            startActivity(intent);
+        }
+    };
     
 }//-----

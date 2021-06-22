@@ -15,33 +15,34 @@
         android:layout_weight="0.5"
         android:gravity="center"
         >
+
         <ImageView
-            android:layout_width="0px"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:src="@drawable/smile"
+            android:id="@+id/iv_profileimg"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="20dp"
-            />
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/smile" />
 
         <TextView
+            android:id="@+id/tv_nickname"
             android:layout_width="0px"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:text="닉네임"
-            android:textSize="20sp"
-            android:layout_marginLeft="10dp"
             android:textColor="@color/brown"
-            android:textStyle="bold"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginRight="20dp"
+            android:layout_weight="1.5"
             android:text="내 정보수정"
-            android:textColor="@color/brown"
-            />
+            android:textColor="@color/brown" />
 
 
     </LinearLayout>
@@ -50,21 +51,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-    <View
-
-        android:layout_width="wrap_content"
-
-        android:layout_height="0.3dp"
-
-        android:background="#4682B4" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.3dp"
+            android:background="#4682B4" />
 
     </LinearLayout>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="0.4"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         >
 
         <Button
@@ -85,44 +84,9 @@
     </LinearLayout>
 
     <View
-
         android:layout_width="wrap_content"
-
         android:layout_height="0.1dp"
-
         android:background="#4682B4" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="0.22"
-        android:layout_marginLeft="22dp"
-        android:layout_marginRight="22dp"
-        android:layout_marginTop="10dp"
-        >
-        <TextView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="이름"
-            android:textSize="15sp"
-            android:layout_marginLeft="10dp"
-        />
-
-        <TextView
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.5"
-            android:text="홍길동"
-            android:textSize="15sp"
-            android:background="@drawable/stroke"
-            android:gravity="center"
-            android:padding="10dp"
-            />
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -143,6 +107,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_agerange"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
@@ -173,6 +138,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_gender"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
@@ -193,16 +159,17 @@
         android:layout_marginRight="22dp"
         android:layout_marginTop="10dp"
         >
+
         <TextView
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="연락처"
-            android:textSize="15sp"
             android:layout_marginLeft="10dp"
-            />
+            android:layout_weight="0.5"
+            android:text="이메일"
+            android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/tv_email"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1.5"
@@ -214,6 +181,38 @@
             android:layout_marginBottom="15dp"
 
             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.22"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="현재 위치"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:background="@drawable/stroke"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="서울시"
+            android:textSize="15sp" />
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -235,7 +234,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="0.3"
+        android:layout_weight="0.2"
         >
         <Button
             android:id="@+id/myPage_btnLogout"
@@ -249,6 +248,20 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.2"
+        android:gravity="bottom"
+        >
 
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/main_bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation_menu" />
+
+    </LinearLayout>
 
 </LinearLayout>

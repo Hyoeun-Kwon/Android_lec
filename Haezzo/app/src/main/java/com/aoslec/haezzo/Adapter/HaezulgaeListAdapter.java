@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdapter.ViewHolder>{
 
-    public static String macIP = "192.168.35.241";
+    public static String macIP = "192.168.129.130";
     private Context mContext = null; //어디서 불렀는지
     private int layout =0;
     private ArrayList<HaezulgaeListBean> data =null; //data

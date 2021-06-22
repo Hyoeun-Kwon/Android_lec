@@ -22,7 +22,7 @@ public class HelperListAdapter extends RecyclerView.Adapter<HelperListAdapter.Vi
     private LayoutInflater inflater = null ;
 
     //IP
-    public static String macIP = "192.168.35.241";
+    public static String macIP = "192.168.129.130";
 
 
     //생성자

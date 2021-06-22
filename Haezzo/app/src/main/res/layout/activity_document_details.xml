@@ -71,10 +71,16 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="10dp">
 
-            <Spinner
-                android:id="@+id/Ddetails_sDproducts"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/Ddetails_tvDproducts"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/stroke"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:gravity="right"
                 />
 
 
@@ -157,7 +163,7 @@
                 android:text="장소" />
 
             <TextView
-                android:id="@+id/Ddetails_tvDaddress"
+                android:id="@+id/Ddetails_tvDplace"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/stroke"
@@ -222,6 +228,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
+            android:id="@+id/Ddetails_btnDapply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"

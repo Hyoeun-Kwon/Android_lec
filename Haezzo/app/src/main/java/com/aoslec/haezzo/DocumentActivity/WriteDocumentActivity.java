@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -26,6 +28,10 @@ public class WriteDocumentActivity extends AppCompatActivity {
 
     //작업용
     String dtitle, dcontent, dmoney;
+
+    //spinner작업
+    Spinner Dproducts;
+    ArrayAdapter<CharSequence> adapter = null;
 
     //임시, usernumber
     String unumber = "1";
@@ -55,6 +61,13 @@ public class WriteDocumentActivity extends AppCompatActivity {
         //버튼
         btnWrite = findViewById(R.id.write_btnWrite);
         btnWrite.setOnClickListener(onClickListener);
+
+        adapter = ArrayAdapter.createFromResource(this, R.array.dproduct_category,
+                android.R.layout.simple_spinner_dropdown_item);
+
+        //spinner 연결
+        Dproducts = findViewById(R.id.write_sDproducts);
+        Dproducts.setAdapter(adapter);
 
     }//onCreate
 

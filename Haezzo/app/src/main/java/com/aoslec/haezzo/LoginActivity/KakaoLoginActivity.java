@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Toast;
 
 import com.aoslec.haezzo.R;
@@ -18,7 +17,7 @@ import com.kakao.util.exception.KakaoException;
 
 public class KakaoLoginActivity extends AppCompatActivity {
 
-    public static String macIP = "192.168.35.241";
+    public static String macIP = "192.168.129.130";
     public static String urlAddr = "http://" + macIP + ":8080/test/Haezzo/";
 
 
@@ -29,6 +28,7 @@ public class KakaoLoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kakao_login);
+
         mSessionCallback = new ISessionCallback() {
             @Override
             public void onSessionOpened() {
@@ -51,7 +51,7 @@ public class KakaoLoginActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(MeV2Response result) { // 로그인 성공 시, 정보를 result에 담아서 줌
                         // 로그인 성공
-                        Intent intent = new Intent(KakaoLoginActivity.this, SubActivity.class);
+                        Intent intent = new Intent(KakaoLoginActivity.this, KakaoLoginSubActivity.class);
                         intent.putExtra("name", result.getKakaoAccount().getProfile().getNickname());
                         intent.putExtra("profileImg", result.getKakaoAccount().getProfile().getProfileImageUrl());
                         intent.putExtra("email", result.getKakaoAccount().getEmail());
@@ -59,18 +59,13 @@ public class KakaoLoginActivity extends AppCompatActivity {
                         intent.putExtra("agerange", result.getKakaoAccount().getAgeRange().getValue());
                         startActivity(intent);
 
-                        // 연결 성공 시 로그로 이름, 프로필 사진, 이메일 표시
-                        Log.v("name ", result.getKakaoAccount().getProfile().getNickname()); // 이름 로그로 표시
-                        Log.v("profile_img ", result.getKakaoAccount().getProfile().getProfileImageUrl()); // 프사 로그로 표시
-                        Log.v("email ", result.getKakaoAccount().getEmail()); // 이메일 로그로 표시
-                        Toast.makeText(KakaoLoginActivity.this, "환영 합니다 !", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(KakaoLoginActivity.this, "로그인을 환영 합니다 !", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
 
             @Override
             public void onSessionOpenFailed(KakaoException exception) {
-                Toast.makeText(KakaoLoginActivity.this, "onSessionOpenFailed", Toast.LENGTH_SHORT).show();
             }
         };
 

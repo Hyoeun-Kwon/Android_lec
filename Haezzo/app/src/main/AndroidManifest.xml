@@ -19,16 +19,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Haezzo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DocumentActivity.DocumentDetailsActivity"></activity>
+
+        <activity android:name=".HelperApplyProfileCheckActivity"></activity>
+        <activity android:name=".HelperApplyProfileActivity" />
+        <activity android:name=".HelperApplyProfileImageActivity" />
+        <activity android:name=".HelperApplyAccountActivity" />
+        <activity android:name=".HelperApplyIntroActivity" />
+        <activity android:name=".HelperApplyIdCardActivity" />
+        <activity android:name=".MyHaezzoListActivity" />
+        <activity android:name=".UserHelperActivity.MypageActivity" />
+        <activity android:name=".UserHelperActivity.HelperListActivity" />
+        <activity android:name=".DocumentActivity.DocumentUpdateActivity"/>
+        <activity android:name=".DocumentActivity.DocumentDetailsActivity" />
+        <activity android:name=".DocumentActivity.WriteDocumentActivity" />
+        <activity android:name=".DocumentActivity.HaezulgaeListActivity" />
         <activity android:name=".LoginActivity.Pay2Activity" />
         <activity android:name=".LoginActivity.Pay1Activity" />
-        <activity android:name=".DocumentActivity.WriteDocumentActivity" />
-        <activity android:name=".UserHelperActivity.MypageActivity" />
-        <activity android:name=".DocumentActivity.HaezulgaeListActivity" />
-        <activity android:name=".UserHelperActivity.HelperListActivity" />
-        <activity android:name=".LoginActivity.SignUpReceiveInfoActivity" />
         <activity android:name=".LoginActivity.KakaoLoginActivity" />
-        <activity android:name=".LoginActivity.SubActivity" />
+        <activity android:name=".LoginActivity.KakaoLoginSubActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

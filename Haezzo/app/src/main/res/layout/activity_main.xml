@@ -14,23 +14,23 @@
         android:layout_height="0px"
         android:layout_weight="0.5"
         >
-        <Button
+        <ImageButton
             android:id="@+id/main_btnHaezzo"
             android:layout_width="0px"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="해쭤"
-            android:textColor="#404040"
-            android:layout_margin="5dp"
+            app:srcCompat="@drawable/btn_haezzo"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
             />
-        <Button
+        <ImageButton
             android:id="@+id/main_btnHaezulgae"
             android:layout_width="0px"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="해줄게"
-            android:textColor="#404040"
-            android:layout_margin="5dp"
+            app:srcCompat="@drawable/btn_haezulgae"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
             />
     </LinearLayout>
 
@@ -73,14 +73,14 @@
         android:layout_weight="1"
         android:gravity="center"
         >
-    <Button
-        android:id="@+id/main_writeDocument"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="요청하기"
-        android:textColor="@color/brown"
-        />
+        <Button
+            android:id="@+id/main_writeDocument"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="요청하기"
+            android:textColor="@color/brown"
+            />
     </LinearLayout>
 
     <LinearLayout
