@@ -8,12 +8,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aoslec.haezzo.LoginActivity.KakaoLoginActivity;
-import com.aoslec.haezzo.LoginActivity.Pay1Activity;
+import com.aoslec.haezzo.Pay1Activity;
 import com.aoslec.haezzo.MainActivity;
 import com.aoslec.haezzo.MyHaezzoListActivity;
 import com.aoslec.haezzo.R;
@@ -21,8 +20,6 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MypageActivity extends AppCompatActivity {
     Button button;

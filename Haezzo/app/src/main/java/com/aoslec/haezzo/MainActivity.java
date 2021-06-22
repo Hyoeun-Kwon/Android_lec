@@ -318,11 +318,11 @@ public class MainActivity extends AppCompatActivity {
                             .setPositiveButton("예", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                  //  Intent intent2 = new Intent(MainActivity.this, HaezulgaeListActivity.class);
-                                 //startActivity(intent2);
+                                  Intent intent2 = new Intent(MainActivity.this, HaezulgaeListActivity.class);
+                                  startActivity(intent2);
 
-                                    Intent intent2 = new Intent(MainActivity.this, HelperApplyIntroActivity.class);
-                                    startActivity(intent2);
+                                    //Intent intent2 = new Intent(MainActivity.this, HelperApplyIntroActivity.class);
+                                    //startActivity(intent2);
                                 }
                             })
                             .show();

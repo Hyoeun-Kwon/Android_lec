@@ -1,4 +1,4 @@
-package com.aoslec.haezzo.LoginActivity;
+package com.aoslec.haezzo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import com.aoslec.haezzo.R;
 
 public class Pay1Activity extends AppCompatActivity {
 

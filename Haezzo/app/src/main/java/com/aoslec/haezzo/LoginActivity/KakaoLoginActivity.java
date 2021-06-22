@@ -17,7 +17,7 @@ import com.kakao.util.exception.KakaoException;
 
 public class KakaoLoginActivity extends AppCompatActivity {
 
-    public static String macIP = "192.168.129.130";
+    public static String macIP = "192.168.35.241";
     public static String urlAddr = "http://" + macIP + ":8080/test/Haezzo/";
 
 
