@@ -1,6 +1,7 @@
 package com.aoslec.haezzo.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aoslec.haezzo.Bean.HaezulgaeListBean;
 import com.aoslec.haezzo.Bean.HelperListBean;
 import com.aoslec.haezzo.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
 public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdapter.ViewHolder>{
 
-    public static String macIP = "192.168.129.130";
+    public static String macIP = "192.168.36.130";
     private Context mContext = null; //어디서 불렀는지
     private int layout =0;
     private ArrayList<HaezulgaeListBean> data =null; //data
@@ -38,7 +40,7 @@ public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdap
     //class 안에 class , 제너릭으로 ViewHolder를 부름
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        public TextView list_tvdate, HaezulgaeList_tvDgaga, HaezulgaeList_tvDproduct, HaezulgaeList_tvDtitle,
+        public TextView list_tvdate, HaezulgaeList_tvDgaga, HaezulgaeList_tvDnumber,HaezulgaeList_tvDproduct, HaezulgaeList_tvDtitle,
                 HaezulgaeList_tvDdate, HaezulgaeList_tvDplace, HaezulgaeList_tvDmoney;
         public WebView HaezulgaeList_wvImage;
 
@@ -47,6 +49,8 @@ public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdap
 
         public ViewHolder(View itemView) {
             super(itemView);
+            //문서번호 추가
+            HaezulgaeList_tvDnumber = itemView.findViewById(R.id.haezulgaeList_tvDnumber);
             HaezulgaeList_tvDproduct = itemView.findViewById(R.id.haezulgaeList_tvDproduct);
             HaezulgaeList_tvDtitle = itemView.findViewById(R.id.haezulgaeList_tvDtitle);
             HaezulgaeList_tvDdate = itemView.findViewById(R.id.haezulgaeList_tvDdate);
@@ -56,26 +60,32 @@ public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdap
             //버튼 추가
            //haezulgaeList_btnDapply = itemView.findViewById(R.id.haezulgaeList_btnDapply);
 
-////            아까 클리커블, 포커서블 해놨음
-////            셀모양 눌렀을때? 인가봄
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                Intent intent = null;
-//                @Override
-//                public void onClick(View v) {
-//                    //뭘 클릭했는지 (현재 클릭한 위치)
-//                    int position = getAdapterPosition();
-//                    intent.putExtra("date", data.get(position).getDate());
-//                    intent.putExtra("title", data.get(position).getTitle());
-//                    intent.putExtra("detail", data.get(position).getDetail());
-//                    intent.putExtra("status", data.get(position).getStatus());
-//                    intent = Intent(v.getContext(), DiaryUpdateActivity.class);
-//
-//                    //snackbar 띄울거임
-//                    Snackbar.make(v,data.get(position).getTitle(), Snackbar.LENGTH_LONG).setAction("누르셨습니다.",null).show();
-//                }
-//            });
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int clickposition = getAdapterPosition();
+                    if (clickposition != RecyclerView.NO_POSITION){
+                        if (mListener !=null){
+                            mListener.onItemClick(v, clickposition);
+                        }
+                    }
+                }
+            }); // setOnClickListener
         }
+    }//---viewHolder
+
+    private OnItemClickListener mListener = null;
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.mListener = listener;
     }
+
+    public interface OnItemClickListener{
+        void onItemClick(View v, int position);
+    }
+
+
 
     //뷰홀더 만들기
     @Override
@@ -97,21 +107,9 @@ public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdap
         holder.HaezulgaeList_tvDdate.setText(data.get(position).getDdate());
         holder.HaezulgaeList_tvDplace.setText(data.get(position).getDplace());
         holder.HaezulgaeList_tvDmoney.setText(data.get(position).getDmoney());
+        //문서번호 추가
+        holder.HaezulgaeList_tvDnumber.setText(data.get(position).getDnumber());
         holder.HaezulgaeList_wvImage.loadData(htmlData(data.get(position).getDimage()),"text/html","UTF-8");
-
-
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(v.getContext(),DiaryUpdateActivity.class);
-//                intent.putExtra("date", data.get(position).getDate());
-//                intent.putExtra("title", data.get(position).getTitle());
-//                intent.putExtra("detail", data.get(position).getDetail());
-//                intent.putExtra("status", data.get(position).getStatus());
-//                intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
-//                v.getContext().startActivity(intent);
-//            }
-//        });
 
 
 

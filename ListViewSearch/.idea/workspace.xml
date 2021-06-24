@@ -23,7 +23,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55a97e8f-10ab-4002-887e-232a5ac3df99" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../TabLayoutTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/FragmentTabIng.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/fragment_done_tab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/fragment_ing_tab.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NetworkJson_Student_P/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecyclerCard_Practice/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../customadapterPractice/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/HaezulgaeListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/HaezulgaeListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/HelperListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/HelperListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/StudentsAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/TabPagerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Adapter/TabPagerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/Bean/Students.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/DocumentActivity/DocumentDetailsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/DocumentActivity/DocumentDetailsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/DocumentActivity/DocumentUpdateActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/DocumentActivity/DocumentUpdateActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/DocumentActivity/HaezulgaeListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/DocumentActivity/HaezulgaeListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/FragmentTab1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/FragmentTab2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/FragmentTabDone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyAccountActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyActivity/HelperApplyAccountActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyIdCardActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyActivity/HelperApplyIdCardActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyIntroActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyActivity/HelperApplyIntroActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyActivity/HelperApplyProfileActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyProfileCheckActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyActivity/HelperApplyProfileCheckActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyProfileImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/HelperApplyActivity/HelperApplyProfileImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/LoginActivity/KakaoLoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/LoginActivity/KakaoLoginActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/MyHaezzoListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/UserHelperActivity/MyHaezzoListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/NetworkTask/HaezulgaeListNetworkTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/NetworkTask/HaezulgaeListNetworkTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/NetworkTask/NetworkTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/UserHelperActivity/MypageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/java/com/aoslec/haezzo/UserHelperActivity/MypageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_id_card.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_id_card.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_intro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_intro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_profile_check.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_profile_check.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_profile_image.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_helper_apply_profile_image.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_my_haezzo_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/activity_my_haezzo_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/fragment_tab1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/fragment_tab2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/haezulgae_custom_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/haezulgae_custom_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Haezzo/app/src/main/res/layout/student_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecyclerCard_Practice/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RecyclerCard_Practice/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

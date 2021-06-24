@@ -91,7 +91,6 @@ public class HaezulgaeListNetworkTask extends AsyncTask<Integer,String,Object> {
                 //--> string 인식 하려구!
                 while (true){
                     String strline = bufferedReader.readLine();
-                    Log.v("Message","strline :" +strline);
 
                     if(strline == null) break;
                     stringBuffer.append(strline + "\n");

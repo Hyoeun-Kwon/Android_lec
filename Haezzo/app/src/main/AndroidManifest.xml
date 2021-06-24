@@ -5,8 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- kakao map 사용 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- kakao map 사용 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -20,18 +19,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Haezzo"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".HelperApplyProfileCheckActivity"></activity>
-        <activity android:name=".HelperApplyProfileActivity" />
-        <activity android:name=".HelperApplyProfileImageActivity" />
-        <activity android:name=".HelperApplyAccountActivity" />
-        <activity android:name=".HelperApplyIntroActivity" />
-        <activity android:name=".HelperApplyIdCardActivity" />
-        <activity android:name=".MyHaezzoListActivity" />
+        <activity android:name=".DocumentActivity.DocumentDetailsActivity"></activity>
+        <activity android:name=".HelperApplyActivity.HelperApplyFinalActivity" />
+        <activity android:name=".HelperApplyActivity.HelperApplyProfileCheckActivity" />
+        <activity android:name=".HelperApplyActivity.HelperApplyProfileActivity" />
+        <activity android:name=".HelperApplyActivity.HelperApplyProfileImageActivity" />
+        <activity android:name=".HelperApplyActivity.HelperApplyAccountActivity" />
+        <activity android:name=".HelperApplyActivity.HelperApplyIntroActivity" />
+        <activity android:name=".HelperApplyActivity.HelperApplyIdCardActivity" />
+        <activity android:name=".UserHelperActivity.MyHaezzoListActivity" />
         <activity android:name=".UserHelperActivity.MypageActivity" />
         <activity android:name=".UserHelperActivity.HelperListActivity" />
-        <activity android:name=".DocumentActivity.DocumentUpdateActivity"/>
-        <activity android:name=".DocumentActivity.DocumentDetailsActivity" />
+        <activity android:name=".DocumentActivity.DocumentUpdateActivity" />
+        <activity android:name=".DocumentActivity.HaezulgaeDocumentDetailsActivity" />
         <activity android:name=".DocumentActivity.WriteDocumentActivity" />
         <activity android:name=".DocumentActivity.HaezulgaeListActivity" />
         <activity android:name=".Pay2Activity" />
@@ -49,7 +49,7 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="c31000113be684c60e864f48656b3f31" />
+            android:value="5ff4b4e18cfb50396955ce5c3549997a" />
     </application>
 
 </manifest>

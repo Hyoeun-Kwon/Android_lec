@@ -3,7 +3,12 @@ package com.aoslec.haezzo.LoginActivity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.aoslec.haezzo.R;
@@ -15,9 +20,11 @@ import com.kakao.usermgmt.callback.MeV2ResponseCallback;
 import com.kakao.usermgmt.response.MeV2Response;
 import com.kakao.util.exception.KakaoException;
 
+import java.security.MessageDigest;
+
 public class KakaoLoginActivity extends AppCompatActivity {
 
-    public static String macIP = "192.168.35.241";
+    public static String macIP = "192.168.36.130";
     public static String urlAddr = "http://" + macIP + ":8080/test/Haezzo/";
 
 
@@ -55,8 +62,8 @@ public class KakaoLoginActivity extends AppCompatActivity {
                         intent.putExtra("name", result.getKakaoAccount().getProfile().getNickname());
                         intent.putExtra("profileImg", result.getKakaoAccount().getProfile().getProfileImageUrl());
                         intent.putExtra("email", result.getKakaoAccount().getEmail());
-                        intent.putExtra("gender", result.getKakaoAccount().getGender().getValue());
-                        intent.putExtra("agerange", result.getKakaoAccount().getAgeRange().getValue());
+                       // intent.putExtra("gender", result.getKakaoAccount().getGender().getValue());
+                        //intent.putExtra("agerange", result.getKakaoAccount().getAgeRange().getValue());
                         startActivity(intent);
 
                         Toast.makeText(KakaoLoginActivity.this, "로그인을 환영 합니다 !", Toast.LENGTH_SHORT).show();
@@ -71,11 +78,11 @@ public class KakaoLoginActivity extends AppCompatActivity {
 
         Session.getCurrentSession().addCallback(mSessionCallback);
         Session.getCurrentSession().checkAndImplicitOpen();
-//      getAppKeyHash();
+      //getAppKeyHash();
     }//onCreate
 
 
-//    카카오 로그인 시 키(해시)를 얻는 메소드 이다.
+//   // 카카오 로그인 시 키(해시)를 얻는 메소드 이다.
 //    private void getAppKeyHash(){
 //        try {
 //            PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);

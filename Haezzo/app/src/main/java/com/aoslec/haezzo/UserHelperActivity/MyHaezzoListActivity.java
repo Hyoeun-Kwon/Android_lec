@@ -1,45 +1,46 @@
-package com.aoslec.haezzo;
+package com.aoslec.haezzo.UserHelperActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.aoslec.haezzo.Adapter.TabPagerAdapter;
-import com.aoslec.haezzo.UserHelperActivity.MypageActivity;
+import com.aoslec.haezzo.MainActivity;
+import com.aoslec.haezzo.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 public class MyHaezzoListActivity extends AppCompatActivity {
 
     BottomNavigationView main_bottomNavigationView;
+    ViewPager2 viewPager;
+    TabLayout tabLayout;
+    TabPagerAdapter adapter;
+    ImageView imageView;//
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.v("Message", "onCreate_MyHaezzoList");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_haezzo_list);
-        TabLayout tabLayout = findViewById(R.id.tab_layout);
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab1 Item ,,,,").setIcon(android.R.drawable.ic_dialog_email));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab2 Item ,,,,").setIcon(android.R.drawable.ic_dialog_dialer));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab3 Item ,,,,").setIcon(android.R.drawable.ic_dialog_map));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab4 Item ,,,,").setIcon(android.R.drawable.ic_dialog_info));
+
+        //레이아웃, 뷰페이저 연결
+        tabLayout = findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("진행중"));
         tabLayout.addTab(tabLayout.newTab().setText("거래완료"));
 
+        viewPager = findViewById(R.id.pager);
 
-
-
-        ViewPager viewPager = findViewById(R.id.pager);
-        PagerAdapter pagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-
-        viewPager.setAdapter(pagerAdapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        adapter = new TabPagerAdapter(fragmentManager,getLifecycle());
+        viewPager.setAdapter(adapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -92,4 +93,4 @@ public class MyHaezzoListActivity extends AppCompatActivity {
         }
     };
 
-}
+}//-----

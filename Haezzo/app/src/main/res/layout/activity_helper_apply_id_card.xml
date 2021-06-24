@@ -6,19 +6,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelperApplyIdCardActivity">
+    tools:context=".HelperApplyActivity.HelperApplyIdCardActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HelperApplyIdCardActivity"
+        android:text="신분증"
+        android:layout_margin="10dp"
+        android:gravity="center"
         />
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="12"
+        android:layout_margin="10dp"
         >
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="신분 인증용 사진 업로드"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="신분증 사진을 업로드 해주세요."
+            android:gravity="center"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:id="@+id/iv_hidcardimage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_margin="10dp"
+            />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

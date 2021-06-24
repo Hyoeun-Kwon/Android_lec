@@ -57,6 +57,7 @@ public class DocumentUpdateActivity extends AppCompatActivity {
         Dupdate_tvDpay = findViewById(R.id.Dupdate_tvDpay);
 
         //화면에 intent로 넘겨온 값 넣기
+        intent.getStringExtra("dnumber");
         Dupdate_tvDproducts.setText(intent.getStringExtra("dproduct"));
         Dupdate_tvDtitle.setText(intent.getStringExtra("dtitle"));
         Dupdate_tvDcontent.setText(intent.getStringExtra("dcontent"));

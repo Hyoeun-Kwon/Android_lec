@@ -19,14 +19,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aoslec.haezzo.DocumentActivity.HaezulgaeListActivity;
 import com.aoslec.haezzo.DocumentActivity.WriteDocumentActivity;
+import com.aoslec.haezzo.HelperApplyActivity.HelperApplyIntroActivity;
 import com.aoslec.haezzo.LoginActivity.GpsTracker;
-import com.aoslec.haezzo.LoginActivity.KakaoLoginSubActivity;
 import com.aoslec.haezzo.UserHelperActivity.HelperListActivity;
+import com.aoslec.haezzo.UserHelperActivity.MyHaezzoListActivity;
 import com.aoslec.haezzo.UserHelperActivity.MypageActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -321,8 +321,8 @@ public class MainActivity extends AppCompatActivity {
                                   Intent intent2 = new Intent(MainActivity.this, HaezulgaeListActivity.class);
                                   startActivity(intent2);
 
-                                    //Intent intent2 = new Intent(MainActivity.this, HelperApplyIntroActivity.class);
-                                    //startActivity(intent2);
+                                  //Intent intent2 = new Intent(MainActivity.this, HelperApplyIntroActivity.class);
+                                  //startActivity(intent2);
                                 }
                             })
                             .show();

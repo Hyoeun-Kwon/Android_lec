@@ -38,16 +38,16 @@ public class HaezulgaeListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_haezulgae_list);
 
-        urlAddr = "http://"+ macIP + ":8080/test/Haezzo/documentSelectList.jsp?";
+        urlAddr = "http://"+ macIP + ":8080/test/Haezzo/haezulgaeDocumentSelectList.jsp?";
 
         recyclerView = findViewById(R.id.lv_haezulgaeList);
         layoutManager = new LinearLayoutManager(HaezulgaeListActivity.this);
         recyclerView.setLayoutManager(layoutManager);
-        Log.v("Message","TEST1");
+
 
         //지원하기 버튼
         Dapply = findViewById(R.id.haezulgaeList_btnDapply);
-        Dapply.setOnClickListener(onClickListener);
+       // Dapply.setOnClickListener(onClickListener);
 
     } // onCreate
 
@@ -67,6 +67,7 @@ public class HaezulgaeListActivity extends AppCompatActivity {
             Log.v("Message","HelperListActivity_helperListBeans" + haezulgaeListBeans);
 
             haezulgaeListAdapter = new HaezulgaeListAdapter(HaezulgaeListActivity.this, R.layout.haezulgae_custom_layout, haezulgaeListBeans);
+            haezulgaeListAdapter.setOnItemClickListener(adapterClick);
             recyclerView.setAdapter(haezulgaeListAdapter);
 
 
@@ -76,16 +77,23 @@ public class HaezulgaeListActivity extends AppCompatActivity {
         }
     }
 
-    //지원하기 버튼
-    View.OnClickListener onClickListener = new View.OnClickListener() {
+
+    //adapter이용-> recyclerview 클릭시 (리스트에서 하나 클릭시)
+    HaezulgaeListAdapter.OnItemClickListener adapterClick = new HaezulgaeListAdapter.OnItemClickListener() {
         @Override
-        public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.haezulgaeList_btnDapply:
-                    Intent intent = new Intent(HaezulgaeListActivity.this, DocumentDetailsActivity.class);
-                    startActivity(intent);
-            }
+        public void onItemClick(View v, int position) {
+            Intent intent = new Intent(HaezulgaeListActivity.this, HaezulgaeDocumentDetailsActivity.class);
+            String dnumber = haezulgaeListBeans.get(position).getDnumber();
+            intent.putExtra("dnumber",dnumber);
+            Log.v("Message","dnumber = " + dnumber);
+            startActivity(intent);
         }
     };
+
+
+
+
+
+
 
 }//-------

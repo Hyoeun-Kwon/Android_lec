@@ -17,11 +17,14 @@
         >
 
         <TextView
+            android:id="@+id/haezulgaeList_tvDnumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="5dp"
-            android:textColor="#ffffff"
+            android:textColor="@color/brown"
             android:padding="10dp"
+            android:text="1"
+            android:gravity="right"
             />
         <LinearLayout
             android:orientation="horizontal"

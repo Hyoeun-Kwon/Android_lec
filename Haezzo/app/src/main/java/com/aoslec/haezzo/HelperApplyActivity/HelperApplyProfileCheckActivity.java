@@ -1,4 +1,4 @@
-package com.aoslec.haezzo;
+package com.aoslec.haezzo.HelperApplyActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,22 +8,20 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class HelperApplyAccountActivity extends AppCompatActivity {
+import com.aoslec.haezzo.R;
 
-    static public Activity activityAccount;
+public class HelperApplyProfileCheckActivity extends AppCompatActivity {
 
     Button buttonBack, buttonOK, buttonCancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_helper_apply_account);
+        setContentView(R.layout.activity_helper_apply_profile_check);
 
-        activityAccount = HelperApplyAccountActivity.this;
-
-        buttonBack = findViewById(R.id.btn_helper_apply_account_back);
-        buttonOK = findViewById(R.id.btn_helper_apply_account_ok);
-        buttonCancel = findViewById(R.id.btn_helper_apply_account_cancel);
+        buttonBack = findViewById(R.id.btn_helper_apply_profilecheck_back);
+        buttonOK = findViewById(R.id.btn_helper_apply_profilecheck_ok);
+        buttonCancel = findViewById(R.id.btn_helper_apply_profilecheck_cancel);
 
         buttonBack.setOnClickListener(onClickListener);
         buttonOK.setOnClickListener(onClickListener);
@@ -35,14 +33,15 @@ public class HelperApplyAccountActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             switch (v.getId()){
-                case R.id.btn_helper_apply_account_back:
+                case R.id.btn_helper_apply_profilecheck_back:
+                    Intent intent = new Intent(HelperApplyProfileCheckActivity.this, HelperApplyProfileActivity.class);
+                    startActivity(intent);
                     finish();
                     break;
-                case R.id.btn_helper_apply_account_ok:
-                    Intent intent = new Intent(HelperApplyAccountActivity.this, HelperApplyIdCardActivity.class);
-                    startActivity(intent);
+                case R.id.btn_helper_apply_profilecheck_ok:
+                    finish();
                     break;
-                case R.id.btn_helper_apply_account_cancel:
+                case R.id.btn_helper_apply_profilecheck_cancel:
                     finish();
                     break;
             }

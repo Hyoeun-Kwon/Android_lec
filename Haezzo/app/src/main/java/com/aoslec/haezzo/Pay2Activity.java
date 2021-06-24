@@ -1,12 +1,12 @@
 package com.aoslec.haezzo;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -46,8 +46,8 @@ public class Pay2Activity extends AppCompatActivity {
     String pgToken;
 
     // 기본 생성자
-// - Activity는 기본 생성자가 없으면 Manifest에서 사용하지 못함.
-// - 만약 생성자를 오버라이딩 했다면 기본 생성자를 작성해 둘것!
+    // - Activity는 기본 생성자가 없으면 Manifest에서 사용하지 못함.
+    // - 만약 생성자를 오버라이딩 했다면 기본 생성자를 작성해 둘것!
     public Pay2Activity() {
 
     }
@@ -62,6 +62,7 @@ public class Pay2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay2);
+
         // 초기화
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         myWebViewClient = new MyWebViewClient();
@@ -161,8 +162,7 @@ public class Pay2Activity extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> headers = new HashMap<>();
-                headers.put("Authorization", "KakaoAK " + "e8575006d2b66045f2c9cd2b311c86f7" +
-                        "");
+                headers.put("Authorization", "KakaoAK " + "e8575006d2b66045f2c9cd2b311c86f7");
                 return headers;
             }
         };
@@ -193,6 +193,5 @@ public class Pay2Activity extends AppCompatActivity {
             view.loadUrl(url);
             return false;
         }
-
     }
 }

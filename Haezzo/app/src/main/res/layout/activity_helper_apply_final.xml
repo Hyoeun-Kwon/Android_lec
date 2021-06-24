@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelperApplyActivity.HelperApplyProfileCheckActivity">
+    tools:context=".HelperApplyActivity.HelperApplyFinalActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -80,6 +80,7 @@
                 android:layout_margin="10dp"
                 />
             <TextView
+                android:id="@+id/tv_hself"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="15"
@@ -95,6 +96,7 @@
                 android:layout_margin="10dp"
                 />
             <TextView
+                android:id="@+id/tv_hgaga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="가전 or 가구 or 가전/가구"
@@ -114,20 +116,20 @@
         android:layout_margin="10dp"
         >
         <Button
-            android:id="@+id/btn_helper_apply_profilecheck_back"
+            android:id="@+id/btn_helper_apply_final_back"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:text="이전단계"
             android:layout_marginRight="20dp"
             />
         <Button
-            android:id="@+id/btn_helper_apply_profilecheck_ok"
+            android:id="@+id/btn_helper_apply_final_ok"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:text="최종\n지원하기"
             />
         <Button
-            android:id="@+id/btn_helper_apply_profilecheck_cancel"
+            android:id="@+id/btn_helper_apply_final_cancel"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:text="지원취소"

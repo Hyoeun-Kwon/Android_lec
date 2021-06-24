@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.aoslec.haezzo.LoginActivity.KakaoLoginActivity;
 import com.aoslec.haezzo.Pay1Activity;
 import com.aoslec.haezzo.MainActivity;
-import com.aoslec.haezzo.MyHaezzoListActivity;
 import com.aoslec.haezzo.R;
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -32,6 +31,8 @@ public class MypageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mypage);
+
+
 
         //네비게이션
         main_bottomNavigationView = (BottomNavigationView)findViewById(R.id.main_bottom_navigation);
@@ -179,6 +180,8 @@ public class MypageActivity extends AppCompatActivity {
             return false;
         }
     };
+
+
 
 
 } // MypageActivity

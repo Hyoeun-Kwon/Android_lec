@@ -1,32 +1,29 @@
 package com.aoslec.haezzo.Adapter;
 
-import android.util.Log;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.aoslec.haezzo.FragmentTab1;
-import com.aoslec.haezzo.FragmentTab2;
+import com.aoslec.haezzo.FragmentTabIng;
+import com.aoslec.haezzo.FragmentTabDone;
 
-public class TabPagerAdapter extends FragmentPagerAdapter {
-    int tabCount;
+public class TabPagerAdapter extends FragmentStateAdapter {
 
-    public TabPagerAdapter(FragmentManager fm, int behavior){
-        super(fm, behavior);
-        this.tabCount = behavior;
-        Log.v("Message", "TabPagerAdapter");
+
+    public TabPagerAdapter(FragmentManager fragmentManager,  Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
     }
 
     @Override
-    public Fragment getItem(int position) {
-        Log.v("Message", "getItem");
-        switch (position){
+    public Fragment createFragment(int position) {
+
+        switch (position) {
             case 0:
-                FragmentTab1 tab1Fragment = new FragmentTab1();
+                FragmentTabIng tab1Fragment = new FragmentTabIng();
                 return tab1Fragment;
             case 1:
-                FragmentTab2 tab2Fragment = new FragmentTab2();
+                FragmentTabDone tab2Fragment = new FragmentTabDone();
                 return tab2Fragment;
 
             default:
@@ -34,12 +31,11 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
 
         }
 
-    }
+
+    }//createFragment
 
     @Override
-    public int getCount() {
-        Log.v("Message", "getCount");
-        return tabCount;
-    }
-
-}
+    public int getItemCount() {
+        return 2;
+    }//getItemCount
+}//-----

@@ -77,18 +77,18 @@ public class BeanAdapter extends RecyclerView.Adapter<BeanAdapter.ViewHolder> {
         return data.size();
     }
 
+
     //htmlData
     private String htmlData(String image){
 
         String content =
                 "<?xml version=\"1.0\" encoding=\"utf-8\" ?>"+
-                "<html><head>"+
-                "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf8\"/>"+
-                "<head><body>"+
-                "<img src=\"http://192.168.35.230:8080/test/";
+                        "<html><head>"+
+                        "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf8\"/>"+
+                        "<head><body>"+
+                        "<img src=\"http://192.168.35.230:8080/test/";
         content += image + "\" alt=\"강아지\" width=\"100%\" height=\"100%\"></body></html>";
         return content;
     }
-
 
 }//Main
