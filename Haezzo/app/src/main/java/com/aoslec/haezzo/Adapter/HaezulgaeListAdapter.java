@@ -14,13 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.aoslec.haezzo.Bean.HaezulgaeListBean;
 import com.aoslec.haezzo.Bean.HelperListBean;
 import com.aoslec.haezzo.R;
+import com.aoslec.haezzo.ShareVar;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
 public class HaezulgaeListAdapter extends RecyclerView.Adapter<HaezulgaeListAdapter.ViewHolder>{
 
-    public static String macIP = "192.168.36.130";
+    String macIP = ShareVar.macIP;
     private Context mContext = null; //어디서 불렀는지
     private int layout =0;
     private ArrayList<HaezulgaeListBean> data =null; //data

@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.aoslec.haezzo.LoginActivity.KakaoLoginActivity;
+import com.aoslec.haezzo.ActivityLogin.KakaoLoginActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

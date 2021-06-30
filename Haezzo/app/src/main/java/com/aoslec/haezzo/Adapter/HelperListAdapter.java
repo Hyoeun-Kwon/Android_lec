@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.aoslec.haezzo.Bean.HelperListBean;
 import com.aoslec.haezzo.R;
+import com.aoslec.haezzo.ShareVar;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ public class HelperListAdapter extends RecyclerView.Adapter<HelperListAdapter.Vi
     private LayoutInflater inflater = null ;
 
     //IP
-    public static String macIP = "192.168.36.130";
+    String macIP = ShareVar.macIP;
 
 
     //생성자

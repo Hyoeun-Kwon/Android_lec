@@ -36,25 +36,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
+
         <LinearLayout
             android:id="@+id/linear1"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
-            >
+            android:orientation="vertical"
+            android:visibility="invisible">
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:backgroundTint="#B3B3B3"
-                android:text="LINEAR1BUTTON1"
-                />
+                android:text="LINEAR1BUTTON1" />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:backgroundTint="#B3B3B3"
-                android:text="LINEAR1BUTTON2"
-                />
+                android:text="LINEAR1BUTTON2" />
 
 
         </LinearLayout>

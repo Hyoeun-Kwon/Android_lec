@@ -5,8 +5,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.aoslec.haezzo.FragmentTabIng;
-import com.aoslec.haezzo.FragmentTabDone;
+import com.aoslec.haezzo.ActivityOnDealList.OnDealTabIng;
+import com.aoslec.haezzo.ActivityOnDealList.OnDealTabDone;
 
 public class TabPagerAdapter extends FragmentStateAdapter {
 
@@ -20,10 +20,10 @@ public class TabPagerAdapter extends FragmentStateAdapter {
 
         switch (position) {
             case 0:
-                FragmentTabIng tab1Fragment = new FragmentTabIng();
+                OnDealTabIng tab1Fragment = new OnDealTabIng();
                 return tab1Fragment;
             case 1:
-                FragmentTabDone tab2Fragment = new FragmentTabDone();
+                OnDealTabDone tab2Fragment = new OnDealTabDone();
                 return tab2Fragment;
 
             default:

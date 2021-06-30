@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HelperApplyActivity.HelperApplyIntroActivity">
+    tools:context=".ActivityHelperApply.HelperApplyIntroActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,11 +24,7 @@
             android:src="@drawable/helperintro2"
             />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="헬퍼 소개"
-            />
+
 
         <Button
             android:id="@+id/btn_helper_apply_intro"
